@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL to PDF Converter - Mobile Friendly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>📄 URL to PDF Converter</h1>
+                <p class="subtitle">Convert any webpage to high-quality PDF</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="form-group">
+                    <label for="urlInput" class="label">Enter Website URL</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="url" 
+                            id="urlInput" 
+                            class="url-input" 
+                            placeholder="https://example.com"
+                            required
+                        >
+                        <span class="input-icon">🌐</span>
+                    </div>
+                    <small class="helper-text">Example: https://www.google.com</small>
+                </div>
+
+                <!-- Quality Selection -->
+                <div class="form-group">
+                    <label class="label">PDF Quality</label>
+                    <div class="quality-options">
+                        <div class="quality-card">
+                            <input type="radio" id="hd" name="quality" value="hd" checked>
+                            <label for="hd" class="quality-label">
+                                <span class="quality-icon">📺</span>
+                                <span class="quality-name">HD</span>
+                                <span class="quality-desc">1920×1080</span>
+                            </label>
+                        </div>
+                        <div class="quality-card">
+                            <input type="radio" id="4k" name="quality" value="4k">
+                            <label for="4k" class="quality-label">
+                                <span class="quality-icon">🎬</span>
+                                <span class="quality-name">4K</span>
+                                <span class="quality-desc">3840×2160</span>
+                            </label>
+                        </div>
+                        <div class="quality-card">
+                            <input type="radio" id="8k" name="quality" value="8k">
+                            <label for="8k" class="quality-label">
+                                <span class="quality-icon">✨</span>
+                                <span class="quality-name">8K UHD</span>
+                                <span class="quality-desc">7680×4320</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conversion Options -->
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="metadataToggle" checked>
+                        <span>Include metadata in PDF</span>
+                    </label>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="button-group">
+                    <button id="convertBtn" class="btn btn-primary">
+                        <span class="btn-icon">⚡</span>
+                        Convert to PDF
+                    </button>
+                    <button id="clearBtn" class="btn btn-secondary">
+                        <span class="btn-icon">🗑️</span>
+                        Clear
+                    </button>
+                </div>
+            </section>
+
+            <!-- Loading State -->
+            <div id="loadingState" class="loading-state hidden">
+                <div class="spinner"></div>
+                <p class="loading-text">Converting your webpage...</p>
+                <p class="loading-subtext" id="loadingSubtext">This may take a moment</p>
+            </div>
+
+            <!-- Progress Section -->
+            <section id="progressSection" class="progress-section hidden">
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <h3>Conversion Progress</h3>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <p id="progressStatus" class="progress-status">Initializing...</p>
+                </div>
+            </section>
+
+            <!-- Status Messages -->
+            <div id="statusMessage" class="status-message hidden"></div>
+
+            <!-- Recent Conversions -->
+            <section class="history-section">
+                <h3>📋 Recent Conversions</h3>
+                <div id="historyList" class="history-list">
+                    <p class="empty-state">No conversions yet. Start by entering a URL above!</p>
+                </div>
+            </section>
+
+            <!-- Features -->
+            <section class="features-section">
+                <h2>✨ Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">🎯</span>
+                        <h4>High Quality</h4>
+                        <p>Up to 8K UHD resolution</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">📱</span>
+                        <h4>Mobile Friendly</h4>
+                        <p>Works on any device</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">⚡</span>
+                        <h4>Fast Processing</h4>
+                        <p>Quick conversion times</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🔒</span>
+                        <h4>Secure</h4>
+                        <p>Your data is private</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 URL to PDF Converter. Built with ❤️</p>
+            <p class="version">v1.0.0</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
